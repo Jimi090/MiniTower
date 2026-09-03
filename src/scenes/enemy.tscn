@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bqjbm364anqm4"]
+
+[ext_resource type="Texture2D" uid="uid://bvxghu2nuwkj0" path="res://assets/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://bnho4hukisa4p" path="res://scripts/enemy.gd" id="1_md0e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqbil"]
+size = Vector2(44, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipu61"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygxny"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi4c7"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70vka"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l77h"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqdth"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cypo"]
+atlas = ExtResource("1_7p1mj")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipu61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygxny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi4c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70vka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l77h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqdth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cypo")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1619649285]
+script = ExtResource("1_md0e3")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1657298571]
+position = Vector2(-4, 1)
+shape = SubResource("RectangleShape2D_qqbil")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2121184453]
+sprite_frames = SubResource("SpriteFrames_478fi")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.89570135
