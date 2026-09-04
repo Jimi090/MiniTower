@@ -1,67 +1,164 @@
 [gd_scene format=3 uid="uid://bqjbm364anqm4"]
 
-[ext_resource type="Texture2D" uid="uid://bvxghu2nuwkj0" path="res://assets/Factions/Goblins/Troops/Torch/Blue/Torch_Blue.png" id="1_7p1mj"]
 [ext_resource type="Script" uid="uid://bnho4hukisa4p" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://i484e18kr2ij" path="res://assets/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_md0e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqbil"]
 size = Vector2(44, 60)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ipu61"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uy6h"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4w8v"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(384, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwavj"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(576, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nenq2"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(768, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md484"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(960, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipns3"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(0, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ygxny"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qclf"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(192, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wi4c7"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8i8w"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(384, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_70vka"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_otmr2"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(576, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2l77h"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtq4b"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(768, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nqdth"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0cyh"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(960, 0, 192, 192)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5cypo"]
-atlas = ExtResource("1_7p1mj")
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0wcc"]
+atlas = ExtResource("2_md0e3")
 region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1ycm"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shcg2"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ile5s"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x4g4"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pwtc"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rogs8"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ipu61")
+"texture": SubResource("AtlasTexture_4ra3w")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ygxny")
+"texture": SubResource("AtlasTexture_5uy6h")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wi4c7")
+"texture": SubResource("AtlasTexture_c4w8v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_70vka")
+"texture": SubResource("AtlasTexture_xwavj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2l77h")
+"texture": SubResource("AtlasTexture_nenq2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nqdth")
+"texture": SubResource("AtlasTexture_md484")
+}],
+"loop": 1,
+"name": &"attacking",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipns3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5cypo")
+"texture": SubResource("AtlasTexture_8qclf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8i8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otmr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtq4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0cyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0wcc")
 }],
 "loop": 1,
 "name": &"idle",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1ycm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shcg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ile5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x4g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pwtc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rogs8")
+}],
+"loop": 1,
+"name": &"running",
+"speed": 10.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_478fi"]
+radius = 52.009613
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1619649285]
 script = ExtResource("1_md0e3")
@@ -75,4 +172,9 @@ shape = SubResource("RectangleShape2D_qqbil")
 sprite_frames = SubResource("SpriteFrames_478fi")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.89570135
+flip_h = true
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=44708935]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=2071868380]
+shape = SubResource("CircleShape2D_478fi")

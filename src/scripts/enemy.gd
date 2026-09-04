@@ -1,13 +1,13 @@
-extends CharacterBody2D
+extends Character
 
-var health := 60
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	add_to_group("enemies")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if health<=0:
-		queue_free()
+	health = 60
+	damage = 10
+	attack_cooldown = 1.1
+	speed = 50
+	team = Teams.RED
+	attack_range = $AttackRange
+	attack_range.body_entered.connect(on_enemy_in_range_entered)
+	attack_range.body_exited.connect(on_enemy_in_range_exited)
