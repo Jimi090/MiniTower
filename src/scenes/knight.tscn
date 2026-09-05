@@ -167,6 +167,7 @@ position = Vector2(2, 2.5)
 shape = SubResource("RectangleShape2D_qqbil")
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=511713675]
+scale = Vector2(0.8000001, 0.8000001)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1914204050]
 position = Vector2(4, -4)

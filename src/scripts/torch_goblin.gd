@@ -1,6 +1,5 @@
 extends Character
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	health = 60
@@ -9,5 +8,4 @@ func _ready() -> void:
 	speed = 50
 	team = Teams.RED
 	attack_range = $AttackRange
-	attack_range.body_entered.connect(on_enemy_in_range_entered)
-	attack_range.body_exited.connect(on_enemy_in_range_exited)
+	super()

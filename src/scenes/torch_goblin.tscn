@@ -1,85 +1,85 @@
 [gd_scene format=3 uid="uid://bqjbm364anqm4"]
 
-[ext_resource type="Script" uid="uid://bnho4hukisa4p" path="res://scripts/enemy.gd" id="1_md0e3"]
-[ext_resource type="Texture2D" uid="uid://i484e18kr2ij" path="res://assets/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_md0e3"]
+[ext_resource type="Script" uid="uid://bnho4hukisa4p" path="res://scripts/torch_goblin.gd" id="1_6ulqy"]
+[ext_resource type="Texture2D" uid="uid://i484e18kr2ij" path="res://assets/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="2_6jeun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqbil"]
 size = Vector2(44, 60)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(0, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uy6h"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(192, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4w8v"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(384, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xwavj"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(576, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nenq2"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(768, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md484"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(960, 384, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ipns3"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(0, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qclf"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(192, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8i8w"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(384, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_otmr2"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(576, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtq4b"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(768, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0cyh"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(960, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g0wcc"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(1152, 0, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1ycm"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(0, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shcg2"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(192, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ile5s"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(384, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1x4g4"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(576, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2pwtc"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(768, 192, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rogs8"]
-atlas = ExtResource("2_md0e3")
+atlas = ExtResource("2_6jeun")
 region = Rect2(960, 192, 192, 192)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_478fi"]
@@ -160,8 +160,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_478fi"]
 radius = 52.009613
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1619649285]
-script = ExtResource("1_md0e3")
+[node name="Torch_goblin" type="CharacterBody2D" unique_id=1619649285]
+script = ExtResource("1_6ulqy")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1657298571]
@@ -175,6 +175,8 @@ autoplay = "idle"
 flip_h = true
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=44708935]
+scale = Vector2(0.7599999, 0.7599999)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=2071868380]
+scale = Vector2(1.2000004, 1.2000004)
 shape = SubResource("CircleShape2D_478fi")

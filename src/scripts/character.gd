@@ -26,12 +26,9 @@ enum Teams {BLUE, RED}
 		team = new_value
 		if team == Teams.BLUE:
 			enemy = Teams.RED
-			direction = 1
 		elif team == Teams.RED:
 			enemy = Teams.BLUE
-			direction = -1
 var enemy : Teams
-var direction : int
 
 @export var attack_range: Area2D
 
@@ -60,7 +57,6 @@ func attack(body):
 	can_attack = true
 
 	if body != null:
-		print(body)
 		attack(body)
 	else:
 		is_attacking = false
@@ -73,7 +69,7 @@ func change_animation():
 	elif state == States.ATTACKING:
 		$AnimatedSprite2D.play("attacking")
 
-func on_enemy_in_range_entered(body):
+func on_enemy_in_attack_range_entered(body):
 	if body.team == enemy:
 		targets.append(body)
 		if not is_attacking:
@@ -81,20 +77,42 @@ func on_enemy_in_range_entered(body):
 			await get_tree().create_timer(first_attack_cooldown).timeout
 			attack(body)
 
-func on_enemy_in_range_exited(body):
+func on_enemy_in_attack_range_exited(body):
 	targets.erase(body)
 	if len(targets)>0:
 		is_attacking = true
 		await get_tree().create_timer(first_attack_cooldown).timeout
-		attack(targets[0])
+		if len(targets)>0:
+			attack(targets[0])
+
+func get_nearest_enemy():
+	var nearest = null
+	var nearest_distance = INF
+
+	for body:CharacterBody2D in get_tree().get_nodes_in_group(str(enemy)):
+		var distance = global_position.distance_to(body.global_position)
+
+		if distance<nearest_distance:
+			nearest_distance=distance
+			nearest=body
+	return nearest
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	attack_range.body_entered.connect(on_enemy_in_range_entered)
-	attack_range.body_exited.connect(on_enemy_in_range_exited)
+	attack_range.body_entered.connect(on_enemy_in_attack_range_entered)
+	attack_range.body_exited.connect(on_enemy_in_attack_range_exited)
+	add_to_group(str(team))
+	#you need to add directly to the character
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if position.x <= 600 and position.x >= 40 and not is_attacking:
-		position.x += direction * speed * delta
+	var nearest_enemy = get_nearest_enemy()
+
+	if nearest_enemy and not is_attacking:
+		var direction = global_position.direction_to(nearest_enemy.global_position)
+		position += direction * speed * delta
 		state = States.RUNNING
+	elif nearest_enemy:
+		state = States.ATTACKING
+	else:
+		state = States.IDLE
