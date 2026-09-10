@@ -30,9 +30,5 @@ func spawn_knight():
 func spawn_torch_goblin():
 	var instance = torch_goblin_scene.instantiate()
 	add_child(instance)
-	var y = randf_range(40,320)
+	var y = randf_range(160,320)
 	instance.global_position = Vector2(640,y)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

@@ -160,7 +160,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_478fi"]
 radius = 52.009613
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8impv"]
+
 [node name="Torch_goblin" type="CharacterBody2D" unique_id=1619649285]
+collision_layer = 2
 script = ExtResource("1_6ulqy")
 metadata/_edit_group_ = true
 
@@ -176,7 +179,16 @@ flip_h = true
 
 [node name="AttackRange" type="Area2D" parent="." unique_id=44708935]
 scale = Vector2(0.7599999, 0.7599999)
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=2071868380]
 scale = Vector2(1.2000004, 1.2000004)
 shape = SubResource("CircleShape2D_478fi")
+
+[node name="DetectionRange" type="Area2D" parent="." unique_id=1568284673]
+scale = Vector2(1.1283267, 1.1283267)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange" unique_id=291643058]
+scale = Vector2(10.52, 10.52)
+shape = SubResource("CircleShape2D_8impv")

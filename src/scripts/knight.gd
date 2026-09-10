@@ -8,4 +8,5 @@ func _ready() -> void:
 	speed = 70
 	team = Teams.BLUE
 	attack_range = $AttackRange
+	detection_range = $DetectionRange
 	super()

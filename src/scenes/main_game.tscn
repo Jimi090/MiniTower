@@ -557,3 +557,9 @@ shape = SubResource("RectangleShape2D_8impv")
 
 [node name="WaveController" type="Node" parent="." unique_id=248254150]
 script = ExtResource("6_ygxny")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=844727337]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(7.2976, 1.8757752)
+text = "Wave 1"
